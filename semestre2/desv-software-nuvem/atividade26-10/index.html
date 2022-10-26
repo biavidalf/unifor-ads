@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 26.10</title>
+</head>
+<body>
+    <h2>Determine seus valores</h2>
+    
+    <label for="input1">Valor 1: </label> <input type="text" id="input1">
+
+    <br>
+
+    <label for="input2">Valor 2: </label> <input type="text" id="input2">
+    
+    <h3>Escolha a operação: </h3>
+    <button onclick="enviar(soma)">Somar</button>
+    <button onclick="enviar(sub)">Subtrair</button>
+    <button onclick="enviar(mut)">Multiplicar</button>
+    <button onclick="enviar(div)">Dividir</button>
+    <button onclick="">Piso</button>
+    <button onclick="">Teto</button>
+
+    <h3 id="resposta"></h3>
+    <script>
+        function enviar(op){
+            console.log(op);
+            let valor1 = parseFloat(document.getElementById('input1').value);
+            let valor2 = parseFloat(document.getElementById('input2').value);
+            window.location.href = `http://localhost:8888/resultado?op=${op}&valor1=${valor1}&valor2=${valor2}`;
+        }
+    </script>
+</body>
+</html>

@@ -21,3 +21,5 @@ function piso(){
 function teto(){
     return false;
 }
+
+module.exports = {soma, mut, sub, div, piso, teto};
