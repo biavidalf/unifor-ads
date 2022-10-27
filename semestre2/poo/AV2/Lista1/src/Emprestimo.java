@@ -1,3 +1,4 @@
+package Lista1;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class Emprestimo {
 			System.out.println((i+1) + ": " + livros.get(i).titulo);
 		}
 	}
-	public void adicionarLivro(Livro livro) {
+	public void adicionarLivro(Livro livro) throws Exception {
 		if(!finalizado) {
 			if(this.pessoa instanceof Aluno && livros.size() < 3) {
 				livros.add(livro);
@@ -30,7 +31,8 @@ public class Emprestimo {
 				livros.add(livro);
 				//System.out.println("Livro " + livro.titulo + " adicionado com sucesso");
 			}else {
-				System.out.println("Número maximo de livros atingidos");
+				// ERRO DE THROW - TRATAÇÃO DE ERRO - NÚMERO MÁXIMO DE LIVROS ATINGIDOS
+				throw new Exception("Número maximo de livros atingidos!!!");
 			}
 		}else {
 			System.out.println("O empréstimo já foi finalizado, não é mais possível adicionar livros.");
@@ -102,7 +104,12 @@ public class Emprestimo {
 	public void setLivros(List<Livro> livros) {
 		if(!finalizado) {
 			for(Livro livro : livros) {
-				adicionarLivro(livro);
+				try {
+					adicionarLivro(livro);
+		        } catch (Exception e) {
+		            System.out.println(e.getMessage());
+		        }
+				
 			}
 		}
 		

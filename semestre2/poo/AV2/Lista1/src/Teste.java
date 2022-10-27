@@ -1,5 +1,6 @@
+package Lista1;
 public class Teste {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// Livros
 		Livro livro1 = new Livro(1, "Livro 1", "Autor 1", "2022", "1");
 		Livro livro2 = new Livro(2, "Livro 2", "Autor 1", "2022", "1");
@@ -17,20 +18,37 @@ public class Teste {
 		// Emprestimo aluno
 		Emprestimo emprestimoA1 = new Emprestimo();
 		emprestimoA1.setPessoa(aluno1);
-		emprestimoA1.adicionarLivro(livro1);
+		try {
+			emprestimoA1.adicionarLivro(livro1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 		emprestimoA1.finalizarEmprestimo();
 		
 		Emprestimo emprestimoA2 = new Emprestimo();
 		emprestimoA2.setPessoa(aluno2);
-		emprestimoA2.adicionarLivro(livro2);
+		try {
+			emprestimoA2.adicionarLivro(livro2);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 		emprestimoA2.finalizarEmprestimo();
 
 		// Emprestimo professor
 		Emprestimo emprestimoP1 = new Emprestimo();
 		emprestimoP1.setPessoa(professor1);
-		emprestimoP1.adicionarLivro(livro3);
-		emprestimoP1.adicionarLivro(livro4);
-		emprestimoP1.adicionarLivro(livro5);
+		
+		// ERRO DE THROW - TRATAÇÃO DE ERRO - NÚMERO MÁXIMO DE LIVROS ATINGIDOS
+		try {
+			emprestimoP1.adicionarLivro(livro3);
+			emprestimoP1.adicionarLivro(livro4);
+			emprestimoP1.adicionarLivro(livro5);
+			emprestimoP1.adicionarLivro(livro5);
+			emprestimoP1.adicionarLivro(livro5);
+			emprestimoP1.adicionarLivro(livro5);
+        } catch (Exception e) {
+        	throw new Exception(e.getMessage());
+        }
 		emprestimoP1.finalizarEmprestimo();
 		emprestimoP1.devolverLivro(livro3);
 		
