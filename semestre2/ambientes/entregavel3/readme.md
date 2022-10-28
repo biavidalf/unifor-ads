@@ -15,6 +15,11 @@ O entregável pede que seja construído um servidor express com dois endpoints, 
 npm install
 ```
 
+- Após instalar todos os pacotes, coloque o servidor para rodar com o comando
+
+```Text Bash
+node app.js
+```
 
 
 ### Primeira Requisição
