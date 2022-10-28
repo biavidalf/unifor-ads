@@ -3,12 +3,12 @@
   Beatriz Vidal, 2217226, ADS
   Algoritmos fundamentais em Javascript
 */
-import { numeroPrimo } from "./primo.js";
-import { somarNumeros } from "./soma.js";
-import { mdc } from "./mdc.js";
-import { fibonacci } from "./fibonacci.js";
-import { ordenarVetor } from "./ordem.js";
-import { contagem } from "./contagem.js";
+import { numeroPrimo } from "./functions/primo.js";
+import { somarNumeros } from "./functions/soma.js";
+import { mdc } from "./functions/mdc.js";
+import { fibonacci } from "./functions/fibonacci.js";
+import { ordenarVetor } from "./functions/ordem.js";
+import { contagem } from "./functions/contagem.js";
 import readlineSync from 'readline-sync';
 
 console.log(`===============================
