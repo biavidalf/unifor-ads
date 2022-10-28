@@ -1,0 +1,7 @@
+// Ferramenta para entrada de dados (npm prompt)
+
+
+// Ferramentas para teste (npm test)
+https://docs.npmjs.com/cli/v8/commands/npm-test
+Jest
+https://jestjs.io/docs/getting-started
