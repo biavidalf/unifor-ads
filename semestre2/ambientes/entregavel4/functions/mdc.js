@@ -3,7 +3,7 @@
   * Description: Calcular o MDC
 */
 
-export function mdc(first, second){
+module.exports = function mdc(first, second){
     let resto;
     let f_old = first;
     let s_old = second;

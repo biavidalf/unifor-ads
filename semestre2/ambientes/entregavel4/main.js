@@ -3,13 +3,13 @@
   Beatriz Vidal, 2217226, ADS
   Algoritmos fundamentais em Javascript
 */
-import { numeroPrimo } from "./functions/primo.js";
-import { somarNumeros } from "./functions/soma.js";
-import { mdc } from "./functions/mdc.js";
-import { fibonacci } from "./functions/fibonacci.js";
-import { ordenarVetor } from "./functions/ordem.js";
-import { contagem } from "./functions/contagem.js";
-import readlineSync from 'readline-sync';
+const numeroPrimo = require('./functions/primo/primo');
+const somarNumeros = require("./functions/soma");
+const mdc = require("./functions/mdc");
+const fibonacci = require("./functions/fibonacci");
+const ordenarVetor = require("./functions/ordem");
+const contagem = require("./functions/contagem/contagem");
+const readlineSync = require('readline-sync');
 
 console.log(`===============================
     ALGORITMOS FUNDAMENTAIS

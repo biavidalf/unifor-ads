@@ -3,7 +3,7 @@
   * Description: Série de Fibonacci
 */
 
-export function fibonacci(quantidadeTermos){
+module.exports = function fibonacci(quantidadeTermos){
     let anterior = 0;
     let atual = 1;
     let resultado = "";

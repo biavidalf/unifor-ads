@@ -3,7 +3,7 @@
   * Description: Contar os números inteiros
 */
 
-export function contagem(numeros) {
+module.exports = function contagem(numeros) {
   let contagem = 0;
 
   for(let i = 0; i < numeros.length; i++){

@@ -3,7 +3,7 @@
   * Description: Checar se um número é primo ou não
 */
 
-export function numeroPrimo(numero) {
+function numeroPrimo(numero) {
     let divisores = 0;
 
     for (let i = 1; i <= numero; i++) {
@@ -18,3 +18,5 @@ export function numeroPrimo(numero) {
       return "-> R: O número digitado (" + numero + ") não é primo.";
     }
 }
+
+module.exports = numeroPrimo;

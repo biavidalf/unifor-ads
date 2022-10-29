@@ -3,7 +3,7 @@
   * Description: Ordenar um vetor
 */
 
-export function ordenarVetor(vetor) {
+module.exports = function ordenarVetor(vetor) {
     let aux;
 
     // Ordenando
