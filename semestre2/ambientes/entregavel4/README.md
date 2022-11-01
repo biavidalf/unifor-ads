@@ -9,6 +9,8 @@ O entregável pede que seja  refatorado o código do primeir entregável para to
 ### Preparação do ambiente
 
 - Baixar os códigos contidos nesse repositórios para a sua máquina
+- Para baixar só a pasta atual, você pode clicar no link abaixo:
+- [Baixar pasta atual](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbiavidalf%2Funifor-ads%2Ftree%2Fmain%2Fsemestre2%2Fambientes%2Fentregavel4 "Link Download Pasta Atual")
 - Executar no terminal o comando
 
 ```Bash
