@@ -11,20 +11,20 @@ O entregável pede que seja construído um servidor express com dois endpoints, 
 - Baixar os códigos contidos nesse repositórios para a sua máquina
 - Executar no terminal o comando
 
-```Text Bash
+```Bash
 npm install
 ```
 
 - Após instalar todos os pacotes, coloque o servidor para rodar com o comando
 
-```Text Bash
+```Bash
 node app.js
 ```
 
 
 ### Primeira Requisição
 
-- Abrir o Postman
+- [Instalar](https://www.postman.com/downloads/ "Link Download Postman") e abrir o postman
 - Adicionar um request
 - Colocar o método GET
 - Adicionar na URL do request <http://localhost:3001>
@@ -38,17 +38,19 @@ node app.js
 - Abrir o Postman
 - Adicionar um request
 - Colocar o método POST
-- Adicionar na URL do request <http://localhost:3001/soma>
+- Adicionar na URL do request <http://localhost:3001/calcular>
 - Clicar em Body
 - Selecionar a opção "raw"
 - Colocar o json no body
 
-```Text JSON
+```JSON
 {
+    "operador": "soma",
     "a": 10,
     "b":20
 }
 ```
-
-- Clicar em enviar
+- De operador estão disponíneis: "soma", "subtracao", "multiplicacao", "divisao"
+- Altere o operador no JSON que a operação também mudará
+- Clique em enviar
 ![Segunda Requisicao](./CapturaPost.png "Segunda Requisicao")
