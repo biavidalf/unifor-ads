@@ -9,6 +9,8 @@ O entregável pede que seja construído um servidor express com dois endpoints, 
 ### Preparação do ambiente
 
 - Baixar os códigos contidos nesse repositórios para a sua máquina
+- Para baixar só a pasta atual, você pode clicar no link abaixo:
+- [Baixar pasta atual](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbiavidalf%2Funifor-ads%2Fedit%2Fmain%2Fsemestre2%2Fambientes%2Fentregavel3 "Link Download Pasta atual")
 - Executar no terminal o comando
 
 ```Bash
