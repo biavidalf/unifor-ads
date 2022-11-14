@@ -1,36 +1,35 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const articleRoutes = require('./src/routes/articleRoutes');
  
 app.use(cors());
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+);
+
+app.use(bodyParser.json())
 app.use(express.json());
+app.use('/articles', articleRoutes);
 
 app.get('/', (req, res) => {
-    res.status(200).send('Back-end Challenge 2021 🏅 - Space Flight News');
+  res.status(200).send('Back-end Challenge 2021 🏅 - Space Flight News');
 })
 
-app.route('/articles/')
-  .get((req, res) => {
-    // Listar todos os artigos da base de dados, utilizar o sistema de paginação para não sobrecarregar a REQUEST
-    res.send('All articles');
+const DB_USER = 'vidal-databaseNumber1';
+const DB_PASSWORD = process.env.pass_database1;
+
+mongoose
+  .connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.ip1c0xp.mongodb.net/?retryWrites=true&w=majority`)
+  .then(() => {
+    console.log('Conectado');
+    app.listen(3000);
   })
-  .post((req, res) => {
-    // Adicionar um novo artigo
-    res.send('Novo article')
+  .catch((err) => {
+    console.log(err);
   })
 
-app.route('/articles/:id')
-  .get((req, res) => {
-    let id = req.params.id;
-    res.send('Get article ' + id);
-  })
-  .put((req, res) => {
-    // Atualizar um artigo baseado no id
-    res.send('Update article ' + req.params.id)
-  })
-  .delete((req, res) => {
-    // Deletar um artigo baseado no id
-    res.send('Delete article ' + req.params.id)
-  })
-
-app.listen(3333);
