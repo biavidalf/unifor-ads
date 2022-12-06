@@ -17,7 +17,7 @@ app.use(express.json());
 app.use('/articles', articleRoutes);
 
 app.get('/', (req, res) => {
-  res.status(200).send('Back-end Challenge 2021 🏅 - Space Flight News');
+  res.status(200).send('Back-end Challenge 2021 🏅 - Space Flight News <br> <a style="backgroud-color: black; color: white; padding: 5px 10px" href="articles">Ver Articles</a>');
 })
 
 const DB_USER = 'vidal-databaseNumber1';
