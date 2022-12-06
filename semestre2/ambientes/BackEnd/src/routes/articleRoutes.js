@@ -12,9 +12,16 @@ router.route('/')
       }
   })
   .post(async (req, res) => {
+    // Verificando se o body está vazio
+    if(!req.body){
+      res.status(500).json({message:'Por favor, insira dados! :('});
+      return
+    }
+    
     // Adicionar um novo artigo
     const article = req.body;
     console.log(req.body);
+
 
     try {
       const articleNoBanco = await Article.findOne({id: article.id});
