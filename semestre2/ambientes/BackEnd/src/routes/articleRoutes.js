@@ -6,21 +6,23 @@ router.route('/')
     // Listar todos os artigos da base de dados, utilizar o sistema de paginação para não sobrecarregar a REQUEST
     try {
         const articles = await Article.find();
-        res.status(200).json(articles);
+        res.status(200).json({data: articles});
       } catch (error) {
         res.status(500).json({error:error});
       }
   })
   .post(async (req, res) => {
     // Adicionar um novo artigo
-    const article = req.body.data;
-    
-    if(!article){
-      res.status(422).json({error: 'Article obrigatório'});
-      return
-    }
+    const article = req.body;
+    console.log(req.body);
 
     try {
+      const articleNoBanco = await Article.findOne({id: article.id});
+      if(articleNoBanco){
+        res.status(500).json({message:'Article já existente no banco'});
+        return
+      }
+      
       await Article.create(article);
       res.status(201).json({message: 'Article criado.'});
     } catch (error) {
