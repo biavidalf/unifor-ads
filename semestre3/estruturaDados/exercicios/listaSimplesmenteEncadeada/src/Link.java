@@ -5,7 +5,7 @@ class Link<E>{
 	private Link<E> next; // Aponta para o próximo nó na lista
 	 
 	// Construtores
-	Link(E it, Link<E> nextval) {E element = it; next = nextval;}
+	Link(E it, Link<E> nextval) {element = it; next = nextval;}
 	Link(Link<E> nextval) { next= nextval; }
 	 
 	// Métodos
